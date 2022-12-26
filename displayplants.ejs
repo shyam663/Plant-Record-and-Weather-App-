@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs")%>
+ <%- include("partials/navAdmin.ejs")%> 
+<h1 class="bg-success p-3 text-light">Update plants</h1>
+
+
+<% for (let plantId = 0; plantId < plants.length; plantId++) { %>
+  <div class="card w-50 mx-auto">
+    <div class="card-body">
+      
+  <p><%= plants[plantId].Plantname%> </p>
+    <div class="row">
+      <a class="btn btn-danger w-25 mx-auto" role="button" href="/deleteplants?id=<%= plants[plantId].plantId%>"><i class="bi bi-x-lg"></i> DELETE</a>
+      
+<a class="btn btn-warning w-25 mx-auto" role="button" href="/updateplants?id=<%= plants[plantId].plantId%>"><i class="bi bi-pencil-fill"></i> UPDATE </a>
+      
+    </div>
+  </div>
+</div>
+    <br><br>
+  
+<% }
+  %>
+  
+<%- include("partials/footer.ejs")%>

@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs")%>
+
+  <h1 class="bg-success p-3 text-light">Welcome Researchers! Please Login</h1>
+
+  <form class="p-3" method="POST" action="/login">
+
+    Username: <input type="text" name="username"><br><br>
+    Password: <input type="password" name="password">  
+    <br><br>
+    <button class="btn btn-primary"> Login </button>
+  </form>
+
+ 
+  
+  <% if (typeof(error) != "undefined") { %> 
+    
+       <%= error %>
+
+    <% } %>
+  
+<%- include("partials/footer.ejs")%>

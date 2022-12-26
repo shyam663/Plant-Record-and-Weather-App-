@@ -1,0 +1,74 @@
+<%- include("partials/header.ejs")%>
+   <%- include("partials/navAdmin.ejs")%> 
+
+<h1 class="bg-success p-3 text-light">Add Plants</h1>
+  
+
+
+  <!-- input -->
+     
+         
+<form action="/addplants" method="POST">
+    
+  <div class="mb-3 text-start w-50 mx-auto">
+    
+    <label class="form-label">Plant Name:</label>
+    <input class="form-control" type="text" name="Plantname">
+    <br>
+    
+    
+   <label class="form-label">Type of Plant:</label>
+    <br>
+    
+    <input type="radio" id="Tree" name="Type" value="Tree" />
+    <label for="Tree">Tree</label>
+  
+    <input type="radio" id="Veg" name="Type" value="Veg" />
+    <label for="Veg">Veg</label>
+
+    <input type="radio" id="Fruit" name="Type" value="Fruit" />
+    <label for="Fruit">Fruit</label>
+    
+    <input type="radio" id="Flower" name="Type" value="Flower" />
+    <label for="Flower">Flower</label>
+
+    <input type="radio" id="Ground" name="Type" value="Ground" />
+    <label for="Ground">Ground Cover</label>
+    
+    <br>
+
+
+    <br>
+    <label class="form-label">Color:</label>
+    <input class="form-control" type="text" name="color">
+    <br>
+
+
+     <br>
+    <label class="form-label">Origin:</label>
+    <input class="form-control" type="text" name="Origin">
+    <br>
+
+    
+    <br>
+    <label class="form-label">Weather:</label>
+    <select name="Weather">
+      <option id="rain" name="Weather" value="rain">rain</option>
+      <option type="radio" id="sun" name="Weather" value="sun">sun</option>
+    </select>
+
+    <br>
+
+    
+    <br>
+    <label class="form-label">Description:</label>
+    <textarea class="form-control" name="description"></textarea>
+    <br><br>
+
+    
+    <button class="btn btn-primary w-100"> Submit </button>
+  </div>
+</form>
+
+  
+<%- include("partials/footer.ejs")%>

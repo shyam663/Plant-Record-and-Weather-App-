@@ -1,0 +1,73 @@
+<%- include("partials/header.ejs")%>
+   <%- include("partials/navAdmin.ejs")%> 
+
+<h1 class="bg-secondary p-3 text-light">Update Plants</h1>
+
+
+
+  <!-- input -->
+<form action="/updateplants" method="POST">
+  <div class="mb-3 text-start w-50 mx-auto">
+    
+  <label class="form-label">Plant name:</label>
+  <input class="form-control" type="text" name="Plantname" value="<%= plantsinfo[0].Plantname%>">
+  <br>
+
+    
+ <label class="form-label">Type of Plant:</label>
+    
+  <input type="radio" id="Tree" name="Type" value="Tree" <%= (plantsinfo[0].Type == 'Tree')?"checked":""%>/>
+  <label for="Tree">Tree</label>
+      
+  <input type="radio" id="Veg" name="Type" value="Veg" <%= (plantsinfo[0].Type == 'Veg')?"checked":""%>/>
+  <label for="Veg">Veg</label>
+
+  <input type="radio" id="Fruit" name="Type" value="Fruit" <%= (plantsinfo[0].Type == 'Fruit')?"checked":""%>/>
+  <label for="Fruit">Fruit</label>
+
+  <input type="radio" id="Flower" name="Type" value="Flower" <%= (plantsinfo[0].Type == 'Flower')?"checked":""%>/>
+  <label for="Flower">Flower</label>
+
+  <input type="radio" id="Ground" name="Type" value="Ground" <%= (plantsinfo[0].Type == 'Ground')?"checked":""%>/>
+  <label for="Ground">Ground cover</label>
+
+  <br>
+  <br>
+
+
+    <label class="form-label">Color:</label>
+  <input class="form-control" type="text" name="color" value="<%= plantsinfo[0].color%>">
+  <br>
+    
+    <label class="form-label">Origin:</label>
+  <input class="form-control" type="text" name="Origin" value="<%= plantsinfo[0].Origin%>">
+  <br>
+
+  
+ <label class="form-label">Weather:</label>
+  <select name="Weather">
+    <option id="rain" name="Weather" value="rain" <%= (plantsinfo[0].Weather == 'rain')?"selected":""%>>rain</option>
+    <option type="radio" id="sun" name="Weather" value="sun" <%= (plantsinfo[0].Weather == 'sun')?"selected":""%>>sun</option>
+  </select>
+<!--   <input type="radio" id="rain" name="Weather" value="rain" <%= (plantsinfo[0].Weather == 'rain')?"checked":""%> />
+  <label for="rain">rain</label>
+      
+  <input type="radio" id="sun" name="Weather" value="sun" <%= (plantsinfo[0].Weather == 'sun')?"checked":""%>/>
+  <label for="sun">sun</label> -->
+    
+
+    <br>
+    <label class="form-label">Description:</label>
+  <textarea class="form-control" name="description"><%= plantsinfo[0].description%></textarea>
+    
+  <input type="hidden" name="plantId" value="<%= plantsinfo[0].plantId%>">
+  <br><br>
+    
+  <button class="btn btn-primary w-100"> Update Plants </button>
+  </div>
+
+  </form>
+    
+  
+<%- include("partials/footer.ejs")%>
+  

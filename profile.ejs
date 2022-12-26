@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs")%>
+<%- include("partials/navAdmin.ejs")%>
+<!--   The nav will change based on if the admin is logged in, based on session -->
+<h1 class="bg-success p-3 text-light">Welcome! <%=username[0].username%></h1>
+<!--   h2 will change depending on a logged in admin -->
+  <script src="js/homepage.js"></script>
+<!--   The nav will change based on if the admin is logged in, based on session -->
+<!--   h2 will change depending on a logged in admin -->
+<div class="w-50 mx-auto p-3">
+  <img class="img-fluid" src="<%=pictureSrc%>">
+  <br>
+<p>The <%=plantInfo.Type%>, <%=plantInfo.Plantname%>, is <%=plantInfo.color%> and grows best in the <%=plantInfo.Weather%>. Sources say that this <%=plantInfo.Type%> grows in <%=plantInfo.Origin%>.</p> <p id="localDesc">Here is a brief description from one of the locals in </p>
+  <br>
+  <p><%=plantInfo.description%></p>
+</div>
+  <br>
+<footer>
+   <div id="temperature"class="bg-secondary p-1 text-light"></div>
+    
+</footer>
+<%- include("partials/footer.ejs")%>

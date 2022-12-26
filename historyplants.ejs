@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs")%>
+ <%- include("partials/navAdmin.ejs")%> 
+<h1 class="bg-success p-3 text-light">History of plants</h1>
+
+
+<% for (let plantId = 0; plantId < plants.length; plantId++) { %>
+  <div class="card w-50 mx-auto">
+    <div class="card-body">
+      
+  <h2><%= plants[plantId].Plantname%> </h2>
+  <%if(weather[0].weatherType == plants[plantId].Weather) {
+      if(weather[0].isLocal == 'T'){
+  %>
+        <p>This plant can grow locally!</p>
+    <%}
+    }%>
+  </div>
+</div>
+    <br>
+  
+<% }
+  %>
+  
+<%- include("partials/footer.ejs")%>

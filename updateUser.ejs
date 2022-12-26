@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs")%>
+ <%- include("partials/navAdmin.ejs")%>
+  <h1 class="bg-success p-3 text-light">Update User Info</h1>
+
+  <form class="p-3" method="POST" action="/updateUser">
+
+    New Username: <input type="text" name="username" value="<%=userData[0].username%>"><br><br>
+    <input type="hidden" name="password" value="<%= userData[0].password%>"/>
+    <input type="hidden" name="userId" value="<%= userData[0].fpuserId%>"/>
+    <br><br>
+    <button class="btn btn-primary">Update</button>
+  </form>
+  
+<%- include("partials/footer.ejs")%>

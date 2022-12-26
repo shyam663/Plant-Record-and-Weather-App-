@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs")%>
+
+  <h1 class="bg-success p-3 text-light">Please Sign Up If You Don't Have Account</h1>
+
+  <form class="p-3" method="POST" action="/signup">
+
+    Username: <input type="text" name="username"><br><br>
+    Password: <input type="password" name="password">  
+    <br><br>
+    <button class="btn btn-primary"> Sign Up </button>
+  </form>
+  
+<%- include("partials/footer.ejs")%>
